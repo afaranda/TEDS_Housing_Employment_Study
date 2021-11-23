@@ -9,4 +9,6 @@ dependencies:
   - scikit-learn
   - tensorflow
   - keras
+  - notebook
+  - jupyterlab
 prefix: /home/abf/anaconda3/envs/binf667013_final_project
