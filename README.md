@@ -16,7 +16,9 @@ Investigate the relationship between state laws regulating involuntary commitmen
 ### Analysis Scripts
   |Script or Notebook       | Language | Purpose |
   |-------------------------|----------|---------|
-  |01_Explore_And_Process.ipynb| Python | Evaluate variable distributions and dependencies, <br> prepare clean data set for analysis|
+  |01_Explore_Data.ipynb| Python | Evaluate variable distributions and dependencies, <br> prepare clean data set for analysis|
+  |02_Impute_Missing.R| R | Impute missing values using the "MICE" Method, which <br> may handle categorical data better than what is availble in Python <br> and may be fasster than nearest neighbor imputation |
+  
   
   
 
