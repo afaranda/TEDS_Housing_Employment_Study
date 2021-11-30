@@ -11,4 +11,5 @@ dependencies:
   - keras
   - notebook
   - jupyterlab
+  - missingno
 prefix: /home/abf/anaconda3/envs/binf667013_final_project
