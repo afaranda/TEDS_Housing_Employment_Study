@@ -16,7 +16,8 @@ Investigate the relationship between state laws regulating involuntary commitmen
 ### Analysis Scripts
   |Script or Notebook       | Language | Purpose |
   |-------------------------|----------|---------|
-  |01_Explore_And_Process.ipynb| R | Evaluate variable distributions and dependencies, prepare clean data set for analysis|
+  |01_Explore_And_Process.ipynb| R | Evaluate variable distributions and dependencies,
+  prepare clean data set for analysis|
   
 
   
