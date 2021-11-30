@@ -14,8 +14,9 @@ Investigate the relationship between state laws regulating involuntary commitmen
   - State level laws relating to involuntary commitment
   
 ### Analysis Scripts
-  |a|b|c|
-  |d|e|f|
+  |Script or Notebook       | Language | Purpose |
+  |-------------------------|----------|---------|
+  |01_Explore_And_Process.ipynb| R | Evaluate variable distributions and dependencies, prepare clean data set for analysis|
   
 
   
