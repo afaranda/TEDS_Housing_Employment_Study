@@ -13,11 +13,13 @@ Investigate the relationship between state laws regulating involuntary commitmen
   - 2017 TEDS Discharge Data set
   - State level laws relating to involuntary commitment
   
+### Non-Anaconda Packages
+  - missingpy: Installed with pip
+  
 ### Analysis Scripts
   |Script or Notebook       | Language | Purpose |
   |-------------------------|----------|---------|
   |01_Explore_Data.ipynb| Python | Evaluate variable distributions and dependencies, <br> prepare clean data set for analysis|
-  |02_Impute_Missing.R| R | Impute missing values using the "MICE" Method, which <br> may handle categorical data better than what is availble in Python <br> and may be fasster than nearest neighbor imputation |
   
   
   

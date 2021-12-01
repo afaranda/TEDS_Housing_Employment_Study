@@ -3,3 +3,4 @@ datasets/*csv
 datasets/*pdf
 .ipynb_checkpoints/*
 notebooks/.ipynb_checkpoints/*
+slurm*
