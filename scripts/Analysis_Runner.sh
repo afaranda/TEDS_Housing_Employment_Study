@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#SBATCH --mem=128000
 
 ## Run Exploration and Preprocessing
 jupyter nbconvert --to pdf\
