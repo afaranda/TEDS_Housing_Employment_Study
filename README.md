@@ -20,7 +20,8 @@ Investigate the relationship between state laws regulating involuntary commitmen
   |Script or Notebook       | Language | Purpose |
   |-------------------------|----------|---------|
   |01_Explore_Data.ipynb| Python | Evaluate variable distributions and dependencies, <br> prepare clean data set for analysis|
-  
+  |Analysis_Runner.sh | BASH | Push as slurm job to run notebooks / analysis scripts in the proper order|
+
   
   
 
