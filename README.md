@@ -12,6 +12,7 @@ Investigate the relationship between state laws regulating involuntary commitmen
 ### Data Sets
   - 2017 TEDS Discharge Data set
   - State level laws relating to involuntary commitment
+  - Table of Census State FIPS Codes <br> https://www.census.gov/library/reference/code-lists/ansi/ansi-codes-for-states.html
   
 ### Non-Anaconda Packages
   - missingpy: Installed with pip
