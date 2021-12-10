@@ -16,4 +16,7 @@ jupyter nbconvert --to html\
     --output-dir=results\
     --execute notebooks/02_Logistic_Models.ipynb
 
-
+## Run Gradient Boosted Forests to predict Relapse
+jupyter nbconvert --to html\
+    --output-dir=results\
+    --execute notebooks/03_Gradient_Boosted_Relapse_Classification.ipynb
