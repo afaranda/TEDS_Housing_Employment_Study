@@ -6,19 +6,6 @@
 mkdir -p analysis_objects
 mkdir -p results
 
-# Create Temporary Script
-
-cat <<EOF > scripts/run_jupyter.sh
-#!/bin/bash
-#SBATCH --mem=256000
-#SBATCH --ntasks=32
-
-echo Running Jupyter Notebook \$1 
-jupyter nbconvert --to html\
-    --output-dir=results\
-    --execute notebooks/\${1}
-EOF 
-
 
 ## Run Exploration and Preprocessing
 if [ -f "results/01_Explore_And_Process.html" ]
@@ -71,8 +58,3 @@ else
 	    echo Must run Notebook 01_Explore_And_Processs.ipynb first
     fi
 fi
-
-
-
-## Cleanup temporary script
-rm scripts/run_jupyter.sh
