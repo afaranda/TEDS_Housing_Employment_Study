@@ -40,7 +40,7 @@ else
     echo Generating "results/03_Gradient_Boosted_Relapse_Classification_All.html"
     if [ -f "analysis_objects/teds_imp_laws.csv" ]
     then
-	    sbatch scripts/run_jupyter.sh 03_Gradient_Boosted_Relapse_Classification_All.ipynb
+	    echo sbatch scripts/run_jupyter.sh 03_Gradient_Boosted_Relapse_Classification_All.ipynb
     else
 	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
@@ -54,7 +54,7 @@ else
     echo Generating "results/04_Gradient_Boosted_Relapse_Classification_NoState.html"
     if [ -f "analysis_objects/teds_imp_laws.csv" ]
     then
-	    sbatch scripts/run_jupyter.sh 04_Gradient_Boosted_Relapse_Classification_NoState.ipynb
+	    echo sbatch scripts/run_jupyter.sh 04_Gradient_Boosted_Relapse_Classification_NoState.ipynb
     else
 	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
@@ -67,7 +67,7 @@ else
     echo Generating "results/05_Gradient_Boosted_Relapse_Classification_NoIC.html"
     if [ -f "analysis_objects/teds_imp_laws.csv" ]
     then
-	    sbatch scripts/run_jupyter.sh 05_Gradient_Boosted_Relapse_Classification_NoIC.ipynb
+	    echo sbatch scripts/run_jupyter.sh 05_Gradient_Boosted_Relapse_Classification_NoIC.ipynb
     else
 	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
@@ -80,7 +80,7 @@ else
     echo Generating "results/06_Gradient_Boosted_Relapse_Classification_NoGeo.html"
     if [ -f "analysis_objects/teds_imp_laws.csv" ]
     then
-	    sbatch scripts/run_jupyter.sh 06_Gradient_Boosted_Relapse_Classification_NoGeo.ipynb
+	    echo sbatch scripts/run_jupyter.sh 06_Gradient_Boosted_Relapse_Classification_NoGeo.ipynb
     else
 	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
@@ -95,7 +95,22 @@ else
     if [ -f "analysis_objects/teds_imp_laws.csv" ]
     then
         echo skipping
-	    #sbatch scripts/run_jupyter.sh 07_Single_Predictor_Logit_Models.ipynb
+	    sbatch scripts/run_jupyter.sh 07_Single_Predictor_Logit_Models.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+## Run XGBoost for Dropout
+if [ -f "results/08_Gradient_Boosted_Dropout_Classification.html" ]
+then
+   echo Found Result File: "results/08_Gradient_Boosted_Dropout_Classification.html"
+else
+    echo Generating "results/08_Gradient_Boosted_Dropout_Classification.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+        #echo skipping
+	    sbatch scripts/run_jupyter.sh 08_Gradient_Boosted_Dropout_Classification.ipynb
     else
 	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
