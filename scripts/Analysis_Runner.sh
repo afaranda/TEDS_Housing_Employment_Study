@@ -16,17 +16,17 @@ else
     sbatch scripts/run_jupyter.sh 01_Analyze_Missing_and_Impute.ipynb
 fi    
 
-## Run Logistic Models for IC Laws on Target Endpoints
-if [ -f "results/02_Logistic_Models.html" ]
+## Run Generate Descriptive Statistics for IC Laws on Target Endpoints
+if [ -f "results/02_Prepare_Descriptive_Statistics.html" ]
 then
-    echo Found Result File: "results/02_Logistic_Models.html"
+    echo Found Result File: "results/02_Prepare_Descriptive_Statistics.html"
 else
-    echo Generating "results/02_Logistic_Models.html"
+    echo Generating "results/02_Prepare_Descriptive_Statistics.html"
     if [ -f "analysis_objects/teds_imp_laws.csv" ]
     then
-	    sbatch scripts/run_jupyter.sh 02_Logistic_Models.ipynb
+	    sbatch scripts/run_jupyter.sh 02_Prepare_Descriptive_Statistics.ipynb
     else
-	    echo Must run Notebook 01_Explore_And_Processs.ipynb first
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
     
 fi
