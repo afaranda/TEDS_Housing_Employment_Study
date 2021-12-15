@@ -100,17 +100,3 @@ else
 	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
 fi
-
-## Run Gradient Boosted Forests to predict Service Utilization
-if [ -f "results/08_Gradient_Boosted_Service_Classification.html" ]
-then
-   echo Found Result File: "results/08_Gradient_Boosted_Service_Classification.html"
-else
-    echo Generating "results/08_Gradient_Boosted_Service_Classification.html"
-    if [ -f "analysis_objects/teds_imp_laws.csv" ]
-    then
-	    sbatch scripts/run_jupyter.sh 08_Gradient_Boosted_Service_Classification.ipynb
-    else
-	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
-    fi
-fi
