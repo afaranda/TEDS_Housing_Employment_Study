@@ -102,16 +102,127 @@ else
 fi
 
 ## Run XGBoost for Dropout
-if [ -f "results/08_Gradient_Boosted_Dropout_Classification.html" ]
+if [ -f "results/08_Gradient_Boosted_Dropout_Classification_All.html" ]
 then
-   echo Found Result File: "results/08_Gradient_Boosted_Dropout_Classification.html"
+   echo Found Result File: "results/08_Gradient_Boosted_Dropout_Classification_All.html"
 else
-    echo Generating "results/08_Gradient_Boosted_Dropout_Classification.html"
+    echo Generating "results/08_Gradient_Boosted_Dropout_Classification_All.html"
     if [ -f "analysis_objects/teds_imp_laws.csv" ]
     then
         #echo skipping
-	    sbatch scripts/run_jupyter.sh 08_Gradient_Boosted_Dropout_Classification.ipynb
+	    sbatch scripts/run_jupyter.sh 08_Gradient_Boosted_Dropout_Classification_All.ipynb
     else
 	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
     fi
 fi
+
+
+if [ -f "results/09_Gradient_Boosted_Dropout_Classification_NoState.html" ]
+then
+    echo Found Result File: "results/09_Gradient_Boosted_Dropout_Classification_NoState.html"
+else
+    echo Generating "results/09_Gradient_Boosted_Dropout_Classification_NoState.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+	    # echo skipping
+	    sbatch scripts/run_jupyter.sh 09_Gradient_Boosted_Dropout_Classification_NoState.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+
+if [ -f "results/10_Gradient_Boosted_Dropout_Classification_NoIC.html" ]
+then
+   echo Found Result File: "results/10_Gradient_Boosted_Dropout_Classification_NoIC.html"
+else
+    echo Generating "results/10_Gradient_Boosted_Dropout_Classification_NoIC.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+	    # echo skipping
+	    sbatch scripts/run_jupyter.sh 10_Gradient_Boosted_Dropout_Classification_NoIC.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+
+if [ -f "results/11_Gradient_Boosted_Dropout_Classification_NoGeo.html" ]
+then
+   echo Found Result File: "results/11_Gradient_Boosted_Dropout_Classification_NoGeo.html"
+else
+    echo Generating "results/11_Gradient_Boosted_Dropout_Classification_NoGeo.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+	    # echo skipping
+	    echo skip sbatch scripts/run_jupyter.sh 11_Gradient_Boosted_Dropout_Classification_NoGeo.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+## Run XGBoost for All REASON
+if [ -f "results/12_Gradient_Boosted_REASON_Classification_All.html" ]
+then
+   echo Found Result File: "results/12_Gradient_Boosted_REASON_Classification_All.html"
+else
+    echo Generating "results/12_Gradient_Boosted_REASON_Classification_All.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+        #echo skipping
+	    sbatch scripts/run_jupyter.sh 12_Gradient_Boosted_REASON_Classification_All.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+
+if [ -f "results/13_Gradient_Boosted_REASON_Classification_NoState.html" ]
+then
+    echo Found Result File: "results/13_Gradient_Boosted_REASON_Classification_NoState.html"
+else
+    echo Generating "results/13_Gradient_Boosted_REASON_Classification_NoState.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+	    # echo skipping
+	    sbatch scripts/run_jupyter.sh 13_Gradient_Boosted_REASON_Classification_NoState.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+
+if [ -f "results/14_Gradient_Boosted_REASON_Classification_NoIC.html" ]
+then
+   echo Found Result File: "results/14_Gradient_Boosted_REASON_Classification_NoIC.html"
+else
+    echo Generating "results/14_Gradient_Boosted_REASON_Classification_NoIC.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+	    # echo skipping
+	    sbatch scripts/run_jupyter.sh 14_Gradient_Boosted_REASON_Classification_NoIC.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+
+if [ -f "results/15_Gradient_Boosted_REASON_Classification_NoGeo.html" ]
+then
+   echo Found Result File: "results/15_Gradient_Boosted_REASON_Classification_NoGeo.html"
+else
+    echo Generating "results/15_Gradient_Boosted_REASON_Classification_NoGeo.html"
+    if [ -f "analysis_objects/teds_imp_laws.csv" ]
+    then
+	    # echo skipping
+	    sbatch scripts/run_jupyter.sh 15_Gradient_Boosted_REASON_Classification_NoGeo.ipynb
+    else
+	    echo Must run Notebook 01_Analyze_Missing_and_Impute.ipynb first
+    fi
+fi
+
+
+
+
+
+
